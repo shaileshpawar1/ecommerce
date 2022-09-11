@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <table
+        style="
+          background-color: gainsboro;
+          margin: auto;
+          width: 50%;
+          border: 3px solid green;
+          padding: 10px;
+        "
+      >
+        <form method="post">
+          {% csrf_token %}
+          <br />
+          <tr>
+            <td>
+              <label for="email" class="control-label">Email</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                value="admin@gmail.com"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password" class="control-label">password</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                value="admin"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Submit" class="btn btn-primary" />
+            </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+  </body>
+</html>
